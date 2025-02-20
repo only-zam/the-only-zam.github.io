@@ -16,7 +16,7 @@ const config = {
     "jambCover": 300,
     "singleHeader": 400,
     "divider": 480,
-    "installPc": 0.285,
+    "installPc": 0.35,
     "pOutter": 570,
     "pInner": 570,
     "sideArms": 840,
