@@ -113,3 +113,25 @@
       cursor: pointer;
       border-radius: 5px;
     }
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .folder-content {
+        width: 90%; /* Ensure the folder content doesn't take full width */
+    }
+
+    .folder-content img {
+        max-width: 70%; /* Add 15% margins on both sides */
+        max-height: 50vh; /* Adjust height for mobile */
+    }
+
+    .nav-arrows {
+        top: 50%; /* Keep arrows in the middle vertically */
+        width: 100%; /* Full width for arrow positioning */
+    }
+
+    .back-button {
+        top: 10px; /* Keep back button at the top left */
+        left: 10px;
+    }
+}
