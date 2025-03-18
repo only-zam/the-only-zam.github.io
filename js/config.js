@@ -6,7 +6,7 @@ const config = {
     "headerP": 600,
     "sillP": 600,
     "glass": 130,
-    "rubber": 50,
+    "rubber": 70,
     "woolFile": 100,
     "rollers": 200,
     "lock": 950,

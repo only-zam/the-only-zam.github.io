@@ -114,6 +114,14 @@
       border-radius: 5px;
     }
 
+/* Media Queries for Responsiveness */
+/*@media (max-width: 550px) {
+
+
+
+
+}*/
+
 /* Media query for mobile screens */
 @media (max-width: 768px) {
     .folder-content {

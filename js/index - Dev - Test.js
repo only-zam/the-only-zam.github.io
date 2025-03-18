@@ -455,7 +455,6 @@ const windowTypes = {
     installation: () => windowTypes.type17.totals() * config.installPc,
   },
 
-
     type18: {  //4 sliding Folding panels
 
     topRailP: () => ((windowTypes.width()+500)/1000)*config.topRailP, //topRail
@@ -509,6 +508,17 @@ const windowTypes = {
 };
 
 
+// Helper function definition
+
+function logObjectFunctions(obj, objName) {
+  Object.entries(obj).forEach(([key, value]) => {
+    if (typeof value === "function") {
+      console.log(`${key} for ${objName} is: `, value());
+    }
+  });
+}
+
+
 
 function start() {
 
@@ -554,86 +564,148 @@ function start() {
   }*/
 
   numberOfPanels === "2" & withWithoutPartition === "noPartition" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type1.totals())+(windowTypes.type1.installation())).toFixed(0), console.log("installation: ", windowTypes.type1.installation()))
-  
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type1.totals())+(windowTypes.type1.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type1, "type1");
+    })()
+
   : numberOfPanels === "2" && (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type2.totals())+(windowTypes.type2.installation())).toFixed(0), console.log("installation: ", windowTypes.type2.installation()))
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type2.totals())+(windowTypes.type2.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type2, "type2");
+    })()
 
   : numberOfPanels === "2" && withWithoutPartition === ("doubleFixed") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type3.totals())+(windowTypes.type3.installation())).toFixed(0), console.log("installation: ", windowTypes.type3.installation()))
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type3.totals())+(windowTypes.type3.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type3, "type3");
+    })()
 
   : numberOfPanels === "3" && withWithoutPartition === ("noPartition") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type4.totals())+(windowTypes.type4.installation())).toFixed(0), console.log("installation: ", windowTypes.type4.installation()))
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type4.totals())+(windowTypes.type4.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type4, "type4");
+    })()
 
   : numberOfPanels === "3" & (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type5.totals())+(windowTypes.type5.installation())).toFixed(0), console.log("installation: ", windowTypes.type5.installation()))
-  
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type5.totals())+(windowTypes.type5.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type5, "type5");
+    })()
+
   : numberOfPanels === "3" & withWithoutPartition === "doubleFixed"?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type6.totals())+(windowTypes.type6.installation())).toFixed(0), console.log("installation: ", windowTypes.type6.installation()))
-  
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type6.totals())+(windowTypes.type6.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type6, "type6");
+    })()
+
   : numberOfPanels === "4" & withWithoutPartition === "noPartition" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type7.totals())+(windowTypes.type7.installation())).toFixed(0), console.log("installation: ", windowTypes.type7.installation()))
-  
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type7.totals())+(windowTypes.type7.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type7, "type7");
+    })()
+
   : numberOfPanels === "4" & (withWithoutPartition === "fixedTop" || withWithoutPartition === "fixedBottom") ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type8.totals())+(windowTypes.type8.installation())).toFixed(0), console.log("installation: ", windowTypes.type8.installation()))
-  
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type8.totals())+(windowTypes.type8.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type8, "type8");
+    })()
+
   : numberOfPanels === "4" & withWithoutPartition === "doubleFixed" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type9.totals())+(windowTypes.type9.installation())).toFixed(0), console.log("installation: ", windowTypes.type9.installation()))
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type9.totals())+(windowTypes.type9.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type9, "type9");
+    })()
 
   : numberOfPanels === "2" & withWithoutPartition === "openAbleTopFxBtm" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type10.totals())+(windowTypes.type10.installation())).toFixed(0), console.log("installation: ", windowTypes.type10.installation()))
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type10.totals())+(windowTypes.type10.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type10, "type10");
+    })()
 
   : numberOfPanels === "3" & withWithoutPartition === "openAbleTopFxBtm" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type11.totals())+(windowTypes.type11.installation())).toFixed(0), console.log("installation: ", windowTypes.type11.installation()))
+    
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type11.totals())+(windowTypes.type11.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type11, "type11");
+    })()
 
   : numberOfPanels === "4" & withWithoutPartition === "openAbleTopFxBtm" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type12.totals())+(windowTypes.type12.installation())).toFixed(0), console.log("installation: ", windowTypes.type12.installation()))
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type12.totals())+(windowTypes.type12.installation())).toFixed(0);
+            logObjectFunctions(windowTypes.type12, "type12");
+    })()
 
   : bathWType === "singlePanel" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type13.totals())+(windowTypes.type13.installation())).toFixed(0), console.log("installation: ", windowTypes.type13.installation()))
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type13.totals())+(windowTypes.type13.installation())).toFixed(0); 
+      logObjectFunctions(windowTypes.type13, "type13");
+    })()
+
   
   : bathWType === "doublePanel" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type14.totals())+(windowTypes.type14.installation())).toFixed(0), console.log("installation: ", windowTypes.type14.installation()))
-  
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type14.totals())+(windowTypes.type14.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type14, "type14");
+    })()
+
   : bathWType === "centerHung" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type16.totals())+(windowTypes.type16.installation())).toFixed(0), console.log("installation: ", windowTypes.type16.installation()))
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type16.totals())+(windowTypes.type16.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type16, "type16");
+    })()
 
   : topHungType === "doublePanel" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type14.totals())+(windowTypes.type14.installation())).toFixed(0), console.log("installation: ", windowTypes.type14.installation()))
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type14.totals())+(windowTypes.type14.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type14, "type14");
+    })()
 
   : topHungType === "singlePanel" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type13.totals())+(windowTypes.type13.installation())).toFixed(0), console.log("installation: ", windowTypes.type13.installation()))
- 
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type13.totals())+(windowTypes.type13.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type13, "type13");
+    })()
+
   : topHungType === "customLight" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type15.totals())+(windowTypes.type15.installation())).toFixed(0), console.log("installation: ", windowTypes.type15.installation()))
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type15.totals())+(windowTypes.type15.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type15, "type15");
+    })()
 
   : topHungType === "centerHung" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type16.totals())+(windowTypes.type16.installation())).toFixed(0), console.log("installation: ", windowTypes.type16.installation()))
+
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type16.totals())+(windowTypes.type16.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type16, "type16");
+    })()
 
   : numberOfPanels === "3" & withWithoutPartition === "openAbleTop" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type17.totals())+(windowTypes.type17.installation())).toFixed(0), console.log("installation: ", windowTypes.type17.installation()))
 
-  : numberOfPanels === "4" & withWithoutPartition === "slidingFolding" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type18.totals())+(windowTypes.type18.installation())).toFixed(0), console.log("installation: ", windowTypes.type18.installation()))
-
-  : numberOfPanels === "3" & withWithoutPartition === "slidingFolding" ?
-    (document.getElementById("cost").value=" Ksh. "+((windowTypes.type19.totals())+(windowTypes.type19.installation())).toFixed(0), console.log("installation: ", windowTypes.type19.installation()))
+    (() => {
+    document.getElementById("cost").value=" Ksh. "+((windowTypes.type17.totals())+(windowTypes.type17.installation())).toFixed(0);
+      logObjectFunctions(windowTypes.type17, "type17");
+    })()
 
   : alert("Please enter valid type"); 
 
-
-// console.log("topRailP for type18 is:", windowTypes.type18.topRailP());
-// console.log("bottomTrackP for type18 is:", windowTypes.type18.bottomTrackP());
-// console.log("foldingSashP for type18 is:", windowTypes.type18.foldingSashP());
-// console.log("foldingBeading for type18 is:", windowTypes.type18.foldingBeading());
-// console.log("outerFrameP for type18 is:", windowTypes.type18.outerFrameP());
-// console.log("rubber for type18 is:", windowTypes.type18.rubber());
-// console.log("glass for type18 is:", windowTypes.type18.glass());
-// console.log("foldingRollers for type18 is:", windowTypes.type18.foldingRollers());
-// console.log("foldingLock for type18 is:", windowTypes.type18.foldingLock());
-// console.log("foldingGuiders for type18 is:", windowTypes.type18.foldingGuiders());
-// console.log("foldingHinges for type18 is:", windowTypes.type18.foldingHinges());
-// console.log("totals for type18 is:", windowTypes.type18.totals());
 
 // console.log("jambP for type1 is:", windowTypes.type1.jambP());
 /*

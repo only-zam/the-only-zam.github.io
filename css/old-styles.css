@@ -50,10 +50,7 @@ section {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-
 }
-
-
 /* Add smooth transition to navigation links */
 .main-navigation ul li a {
     transition: background 0.3s ease, color 0.3s ease;
@@ -422,14 +419,12 @@ section {
     font-size: 0.9rem;
     font-weight: normal;
     line-height: 1.4;
-    color: #000000;
-/*    color: #3776ab;*/
+    color: #3776ab;
 }
 
 .userGuide-widget .user-guide-items li h2 a {
-    color: #3776ab;
+    color: inherit;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .userGuide-widget .user-guide-items li h2 a:hover {
@@ -443,56 +438,6 @@ section {
     color: white; /* Text color when active */
     text-decoration: underline; /* Remove underline during active state */
 }
-
-.blogs-widget {
-    width: 98%; /* 100% - (7% + 7%) */
-    margin-left: 1%; /* Explicit left margin */
-    margin-right: 1%; /* Explicit right margin */
-    margin-top: 20px;
-    padding: 20px 0;
-}
-
-/* Gallery and User Guide Widgets */
-
-.blog1-widget {
-    border-top: 4px solid #75a8d3;
-    padding: 5%;
-}
-
-.blog1-widget-header-container {
-    padding: 5px; /* Adds padding inside the container */
-    display: flex;
-    justify-content: space-between; /* Puts space between the <h1> and <p> */
-    align-items: center; /* Vertically centers the items */
-    width: 100%; /* Ensures the container takes full width */
-}
-
-.blog1-widget-header-container p {
-    margin-right: 10%;
-}
-
-.blog1-widget-header-container a {
-    text-decoration: none;
-    color: #999999;
-    font-family: Flux-Regular, SourceSansProRegular, Arial, sans-serif;
-}
-
-.blogs-widget h1.widget-title {
-    color: #444444; /* Dark gray color */
-    font-size: 1.2rem; /* Font size */
-    margin-bottom: 10px; /* Space below the heading */
-    font-family: Flux-Regular, SourceSansProRegular, Arial, sans-serif;
-}
-
-/* Styles for .userGuide-widget */
-.blog2-widget {
-    border-top: 4px solid #75a8d3;
-    padding: 5%;
-}
-
-
-
-
 
 .widgets-2 {
     width: 94%; /* Adjusted to account for 2% margins on either side */
@@ -551,28 +496,23 @@ section {
 .main-footer {
     background: #1e2933; /* Dark background color */
     color: #fff; /* White text color */
-    padding: 30px 0; /* Padding for top and bottom */
+    padding: 40px 0; /* Padding for top and bottom */
+    text-align: center; /* Center-align content */
     border-top: 1px solid #444; /* Add a subtle border at the top */
 }
 
 .main-footer .container {
     display: flex;
-    justify-content: space-between; /* Space between copyright and social icons */
-    align-items: center; /* Vertically center content */
-    max-width: 1200px; /* Match the container width */
-    margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Add padding to prevent content from touching edges */
-}
-
-.copyright-section p {
-    margin: 0; /* Remove default margin */
-    font-size: 0.9rem; /* Adjust font size */
-    color: #bbb; /* Light gray text color */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between social media links and copyright */
 }
 
 .social-media-links {
     display: flex;
     gap: 15px; /* Space between social media icons */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .social-media-links a {
@@ -586,9 +526,15 @@ section {
 }
 
 .social-media-links img {
-    width: 27px; /* Icon size */
-    height: 27px; /* Icon size */
+    width: 24px; /* Icon size */
+    height: 24px; /* Icon size */
+    filter: brightness(0) invert(1); /* Make icons white */
+}
 
+.copyright-section p {
+    margin: 0; /* Remove default margin */
+    font-size: 0.9rem; /* Adjust font size */
+    color: #bbb; /* Light gray text color */
 }
 
 
@@ -659,21 +605,14 @@ section {
         margin-left: 10px; /* Add spacing between .gallery-widget and .userGuide-widget */
     }
 
-    .blogs-widget {
-        display: flex;
-        justify-content: space-between;
+    .social-media-links {
+        gap: 10px; /* Reduce gap on smaller screens */
     }
 
-    .blog1-widget {
-        flex: 1; /* Take up available space */
-        margin-right: 10px; /* Add spacing between .gallery-widget and .userGuide-widget */
+    .social-media-links img {
+        width: 20px; /* Smaller icons on mobile */
+        height: 20px;
     }
-
-    .blog2-widget {
-        flex: 1; /* Take up available space */
-        margin-left: 10px; /* Add spacing between .gallery-widget and .userGuide-widget */
-    }
-
 }
 
 
@@ -816,28 +755,6 @@ section {
         margin-bottom: 0; /* Remove bottom margin for the last widget */
     }
 
-    .social-media-links {
-        gap: 10px; /* Reduce gap on smaller screens */
-    }
-
-    .social-media-links img {
-        width: 30px; /* Smaller icons on mobile */
-        height: 30px;
-    }
-
-    .main-footer .container {
-        flex-direction: column; /* Stack copyright and social icons vertically on small screens */
-        gap: 10px; /* Add space between stacked elements */
-    }
-
-    .social-media-links {
-        gap: 10px; /* Reduce gap between icons on smaller screens */
-    }
-
-    .social-media-links img {
-        width: 30px; /* Smaller icons on mobile */
-        height: 30px;
-    }
 }
 
 /* Features Section */
@@ -930,5 +847,4 @@ section {
 }
 
     
-
 
