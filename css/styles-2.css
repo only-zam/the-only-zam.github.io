@@ -499,6 +499,9 @@ section {
     margin-bottom: 1px;
 }*/
 
+.blog1 ol {
+    padding: 2px;
+}
 .blog1 .aluminium-benefits li {
     position: relative; /* Required for pseudo-elements */
     padding: 20px; /* Add padding for spacing inside the box */
